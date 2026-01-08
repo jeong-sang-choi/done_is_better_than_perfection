@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Today</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/today.css" />
+  </head>
+
+  <body>
+    <!-- 상단 네비 -->
+    <header class="top">
+      <nav class="nav">
+        <span class="nav-item active">Today</span>
+        <span class="nav-item">Progress</span>
+        <span class="nav-item">I will</span>
+      </nav>
+    </header>
+
+    <!-- ===================== -->
+    <!-- Today 메인 콘텐츠 -->
+    <!-- ===================== -->
+    <main class="container">
+      <section class="today">
+        <h1 class="today-title">Today</h1>
+
+        <div class="today-layout">
+          <!-- 왼쪽 영역 -->
+          <div class="today-left">
+            <!-- One-line Goal -->
+            <div class="card goal-card">
+              <label class="card-label">
+                <input type="checkbox" />
+                One-Line Goal
+              </label>
+
+              <input
+                type="text"
+                class="goal-input"
+                placeholder="Achieve your main objective in one line..."
+              />
+            </div>
+
+            <!-- Checklist -->
+            <div class="card checklist-card">
+              <h2 class="card-title">Today's Checklist</h2>
+
+              <label class="check-item">
+                <input type="checkbox" />
+                Morning Routine
+              </label>
+
+              <label class="check-item">
+                <input type="checkbox" />
+                Go for a run or do a quick workout
+              </label>
+
+              <label class="check-item">
+                <input type="checkbox" />
+                Study for at least 30 minutes
+              </label>
+
+              <label class="check-item">
+                <input type="checkbox" />
+                Read a book or watch a tutorial
+              </label>
+            </div>
+          </div>
+
+          <!-- 오른쪽 Notes -->
+          <div class="today-right">
+            <div class="card notes-card">
+              <h2 class="card-title">Notes</h2>
+
+              <textarea
+                class="notes-textarea"
+                placeholder="Write down any thoughts or ideas..."
+              ></textarea>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

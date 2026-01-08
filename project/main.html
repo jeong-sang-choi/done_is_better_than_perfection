@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Today</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+
+  <body>
+    <!-- 상단 네비 -->
+    <header class="top">
+      <nav class="nav">
+        <span class="nav-item active">Today</span>
+        <span class="nav-item">Progress</span>
+        <span class="nav-item">I will</span>
+      </nav>
+    </header>
+
+    <!-- 메인 배경 -->
+    <main class="container">
+      <!-- 눈 효과 -->
+      <div class="snow"></div>
+      <div class="snow snow2"></div>
+
+      <!-- 장면 -->
+      <div class="scene">
+        <img src="images/character.png" class="character" />
+
+        <div class="speech">
+          <p>Do it for yourself</p>
+          <p>Just 10 minutes.</p>
+        </div>
+      </div>
+
+      <!-- 스크롤 힌트 -->
+      <div class="scroll-hint">
+        <span>Scroll</span>
+        <div class="arrow"></div>
+      </div>
+    </main>
+
+    <!-- 방문자 영역 -->
+    <section class="visitor-section">
+      <p class="visitor-label">Today, people stayed here</p>
+      <p class="visitor-count">
+        <span id="visitor-number">0</span>
+      </p>
+    </section>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>

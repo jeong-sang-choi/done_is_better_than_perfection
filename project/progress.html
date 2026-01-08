@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Progress</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/progress.css" />
+  </head>
+  <body>
+    <!-- ================= NAV ================= -->
+    <header class="top-nav">
+      <nav class="nav">
+        <span class="nav-item">Today</span>
+        <span class="nav-item active">Progress</span>
+        <span class="nav-item">I will</span>
+        <span class="nav-item login">login</span>
+      </nav>
+    </header>
+
+    <!-- ================= MAIN ================= -->
+    <main class="container">
+      <!-- TITLE -->
+      <section class="title-section">
+        <h1>Progress</h1>
+        <p class="subtitle">Today, build upon yesterday!</p>
+        <p class="desc">
+          나의 작은 기록들이 모여서 나를 이루고 있습니다.<br />
+          어제의 나를 뛰어넘는 오늘이 되도록 노력해보세요.
+        </p>
+      </section>
+
+      <!-- CARD -->
+      <section class="progress-card">
+        <!-- GRAPH -->
+        <div class="chart-wrapper">
+          <div class="chart-grid"></div>
+
+          <div class="bars">
+            <div class="bar" data-label="Mon"></div>
+            <div class="bar" data-label="Tue"></div>
+            <div class="bar" data-label="Wed"></div>
+            <div class="bar" data-label="Thu"></div>
+            <div class="bar" data-label="Fri"></div>
+            <div class="bar" data-label="Sat"></div>
+            <div class="bar today" data-label="오늘"></div>
+          </div>
+
+          <!-- CHARACTER -->
+          <div class="character">
+            <div class="flag"></div>
+          </div>
+        </div>
+
+        <!-- STATS -->
+        <div class="stats">
+          <div class="stat">
+            <span class="label">Streak</span>
+            <span class="value">3 days</span>
+          </div>
+          <div class="stat">
+            <span class="label">Entries</span>
+            <span class="value">15 lines</span>
+          </div>
+          <div class="stat">
+            <span class="label">Total Time</span>
+            <span class="value">120 mins</span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

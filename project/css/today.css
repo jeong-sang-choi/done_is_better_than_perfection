@@ -1,0 +1,236 @@
+/* ==================================================
+   TODAY PAGE – PAPER / SOFT / NAV-BLEND
+   common.css 미침범
+   ================================================== */
+
+/* ===== Big Paper Canvas ===== */
+.today {
+  max-width: 1400px;
+  margin: 64px auto 96px; /* 네비 아래 여백 줄임 */
+  padding: 64px 80px 80px;
+
+  position: relative;
+  top: -24px; /* 🔥 네비 아래로 살짝 겹치게 */
+
+  background: #f7f6f3;
+  border-radius: 32px 32px 24px 24px;
+
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.06);
+}
+
+/* ===== NAV-BLEND LAYER ===== */
+.today::before {
+  content: '';
+  position: absolute;
+  top: -72px; /* 네비 높이만큼 */
+  left: 0;
+  right: 0;
+  height: 72px;
+
+  background: #f7f6f3;
+  border-radius: 32px 32px 0 0;
+
+  z-index: -1;
+}
+
+/* ===== Title ===== */
+.today-title {
+  font-size: 65px;
+  font-weight: 500;
+  letter-spacing: -0.2px;
+  margin-bottom: 30px;
+  margin-top: -40px;
+  color: #222;
+}
+
+/* ===== Layout ===== */
+.today-layout {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 56px;
+}
+
+/* ==================================================
+   Inner Sections (Subtle Paper Blocks)
+   ================================================== */
+.card {
+  background: #faf9f7;
+  border-radius: 18px;
+  padding: 24px 28px;
+
+  border: none;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+}
+
+/* ==================================================
+   One-Line Goal
+   ================================================== */
+.goal-card {
+  margin-bottom: 32px;
+}
+
+.card-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 15px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 14px;
+}
+
+.goal-input {
+  width: 100%;
+  padding: 14px 16px;
+
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  background: #ffffff;
+
+  font-size: 14px;
+  outline: none;
+}
+
+.goal-input::placeholder {
+  color: #9a9a9a;
+}
+
+/* ==================================================
+   Checklist
+   ================================================== */
+.card-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 18px;
+  color: #222;
+}
+
+.check-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  padding: 14px 0;
+  font-size: 15px;
+  color: #333;
+
+  border-bottom: 1px dashed rgba(0, 0, 0, 0.08);
+}
+
+.check-item:last-child {
+  border-bottom: none;
+}
+
+/* ==================================================
+   Notes (Attached Memo 느낌)
+   ================================================== */
+.today-right {
+  height: 100%;
+}
+
+.notes-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+
+  background: #faf9f7;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.06);
+}
+
+.notes-textarea {
+  flex: 1;
+  margin-top: 14px;
+  padding: 12px 10px;
+
+  border: none;
+  outline: none;
+  resize: none;
+
+  font-size: 14px;
+  line-height: 30px;
+  color: #444;
+
+  background: repeating-linear-gradient(#faf9f7, #faf9f7 29px, #e3e2df 30px);
+}
+
+/* ==================================================
+   Checkbox – Soft & Quiet
+   ================================================== */
+.today input[type='checkbox'] {
+  width: 18px;
+  height: 18px;
+  accent-color: #8f8f8f;
+  cursor: pointer;
+}
+
+/* ==================================================
+   Responsive
+   ================================================== */
+@media (max-width: 1024px) {
+  .today {
+    padding: 48px 32px 64px;
+    margin: 48px 16px 80px;
+    top: -16px;
+  }
+
+  .today-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .today-right {
+    height: 360px;
+  }
+}
+
+/* ==================================================
+   NAV SPACING FIX (Today Page Only)
+   ================================================== */
+
+/* ===============================
+   COMPACT NAV – FIXED VERSION
+   =============================== */
+
+/* 바 전체는 가운데 */
+.top .nav {
+  display: flex;
+  justify-content: center;
+}
+
+/* 실제 네비 폭 */
+.top .nav-inner {
+  display: flex;
+  width: 420px; /* 🔥 기준 너비 */
+}
+
+/* 각 메뉴가 자기 영역 가짐 */
+.top .nav-item {
+  flex: 1; /* 🔥 핵심 */
+  text-align: center;
+
+  font-size: 30px;
+  color: #777;
+  cursor: pointer;
+  padding: 8px 0;
+}
+
+/* 활성 탭 */
+.top .nav-item.active {
+  color: #222;
+  font-weight: 600;
+  position: relative;
+}
+
+/* 밑줄 */
+.top .nav-item.active::after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 28px;
+  height: 2px;
+  background: #333;
+  border-radius: 2px;
+}
