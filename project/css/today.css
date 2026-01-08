@@ -234,3 +234,34 @@
   background: #333;
   border-radius: 2px;
 }
+
+/* ===================== */
+/* Complete Button */
+/* ===================== */
+
+.complete-wrapper {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.complete-btn {
+  padding: 14px 40px;
+  font-size: 16px;
+  border-radius: 999px;
+  border: none;
+  background: #333;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.complete-btn:hover {
+  background: #111;
+  transform: translateY(-2px);
+}
+
+.complete-btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}

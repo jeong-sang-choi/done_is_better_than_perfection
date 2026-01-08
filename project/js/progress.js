@@ -1,7 +1,27 @@
 document.addEventListener('DOMContentLoaded', () => {
-  animateBars();
-  animateStats();
+  applyProgressData(); // 1️⃣ 데이터 반영
+  animateBars(); // 2️⃣ 애니메이션
+  animateStats(); // 3️⃣ 숫자 카운트
 });
+
+/* ===============================
+   APPLY PROGRESS DATA
+================================ */
+function applyProgressData() {
+  const data = JSON.parse(localStorage.getItem('progress')) || {};
+  const today = new Date().toISOString().slice(0, 10);
+  const count = data[today] || 0;
+
+  const bar = document.querySelector('.bar.today');
+  if (!bar) return;
+
+  // 👉 퍼센트 → 픽셀로 변환해서 data 속성에 저장
+  const base = 30; // 최소 높이
+  const unit = 15; // 증가 단위
+  const percent = base + count * unit;
+
+  bar.dataset.targetHeight = percent;
+}
 
 /* ===============================
    BAR ANIMATION
@@ -10,43 +30,13 @@ function animateBars() {
   const bars = document.querySelectorAll('.bar');
 
   bars.forEach((bar, index) => {
-    // CSS에서 설정된 최종 높이 가져오기
-    const finalHeight = bar.offsetHeight;
+    const targetPercent = bar.dataset.targetHeight || 40;
 
-    // 초기 상태
-    bar.style.height = '0px';
+    bar.style.height = '0%';
     bar.style.transition = 'height 0.8s ease';
 
-    // 순차적으로 올라가게
     setTimeout(() => {
-      bar.style.height = finalHeight + 'px';
+      bar.style.height = targetPercent + '%';
     }, 150 + index * 120);
-  });
-}
-
-/* ===============================
-   NUMBER COUNT UP
-================================ */
-function animateStats() {
-  const stats = document.querySelectorAll('.stat .value');
-
-  stats.forEach((stat) => {
-    const text = stat.innerText;
-    const number = parseInt(text.replace(/[^0-9]/g, ''));
-    const suffix = text.replace(/[0-9]/g, '');
-
-    let current = 0;
-    const duration = 800;
-    const stepTime = Math.max(Math.floor(duration / number), 20);
-
-    const timer = setInterval(() => {
-      current += 1;
-      stat.innerText = current + suffix;
-
-      if (current >= number) {
-        stat.innerText = number + suffix;
-        clearInterval(timer);
-      }
-    }, stepTime);
   });
 }
