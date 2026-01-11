@@ -34,3 +34,13 @@ document.addEventListener('DOMContentLoaded', () => {
     el.textContent = current.toLocaleString();
   }, 20);
 });
+
+// 저장된 유저 정보 확인
+const user = localStorage.getItem('user');
+
+// 로그인 안 했으면 Login 버튼 보이게
+if (!user) {
+  console.log('로그인 안 됨');
+} else {
+  console.log('로그인 유저:', user);
+}

@@ -168,15 +168,24 @@ body {
 }
 
 /* ===== 스크롤 힌트 ===== */
+/* ===== 스크롤 힌트 수정본 ===== */
 .scroll-hint {
   position: absolute;
-  bottom: 24px;
+
+  /* 🔥 배경 바닥 기준 */
+  bottom: -60vh; /* ← 카펫 위 느낌 */
   left: 50%;
   transform: translateX(-50%);
-  z-index: 5;
-  text-align: center;
-  color: rgba(255, 255, 255, 0.8);
-  font-size: 12px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 14px;
+
+  z-index: 4; /* overlay + scene 위 */
+  pointer-events: none;
 }
 
 .scroll-hint .arrow {
@@ -224,4 +233,25 @@ body {
   font-size: 48px;
   font-weight: 600;
   color: #222;
+}
+
+/* ==== 완료 버튼 */
+
+.done-btn {
+  position: absolute;
+  top: -40px; /* 말풍선 근처 */
+  left: 50%;
+  transform: translateX(-50%);
+
+  padding: 8px 14px;
+  border-radius: 18px;
+  font-size: 13px;
+
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+}
+
+.done-btn.done {
+  background: #888;
+  cursor: default;
 }

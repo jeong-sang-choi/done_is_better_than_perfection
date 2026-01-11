@@ -35,12 +35,12 @@
 
 /* ===== Title ===== */
 .today-title {
-  font-size: 65px;
+  font-size: 52px;
   font-weight: 500;
   letter-spacing: -0.2px;
-  margin-bottom: 30px;
+  margin-bottom: 48px;
   margin-top: -40px;
-  color: #222;
+  color: #555;
 }
 
 /* ===== Layout ===== */
@@ -66,30 +66,35 @@
    One-Line Goal
    ================================================== */
 .goal-card {
-  margin-bottom: 32px;
+  margin-bottom: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 .card-label {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
+
+  padding: 14px 16px; /* 🔥 세로 여유 증가 */
+  border-radius: 12px;
 
   font-size: 15px;
   font-weight: 600;
   color: #333;
-  margin-bottom: 14px;
+
+  margin-bottom: 16px; /* input과의 간격도 살짝 */
+  background: rgba(0, 0, 0, 0.025);
 }
 
 .goal-input {
   width: 100%;
-  padding: 14px 16px;
+  padding: 14px 5px;
 
-  border-radius: 12px;
+  border-radius: 10px; /* 카드보다 작게 */
   border: 1px solid rgba(0, 0, 0, 0.08);
-  background: #ffffff;
 
-  font-size: 14px;
-  outline: none;
+  background: #fdfdfb; /* 카드와 톤 맞추기 */
 }
 
 .goal-input::placeholder {
@@ -109,13 +114,13 @@
 .check-item {
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
+  cursor: pointer;
+}
 
-  padding: 14px 0;
-  font-size: 15px;
-  color: #333;
-
-  border-bottom: 1px dashed rgba(0, 0, 0, 0.08);
+.check-item.done span {
+  text-decoration: line-through;
+  color: #aaa;
 }
 
 .check-item:last-child {
@@ -193,6 +198,10 @@
    =============================== */
 
 /* 바 전체는 가운데 */
+.top {
+  background: #f7f6f3; /* Today 카드와 같은 색 */
+}
+
 .top .nav {
   display: flex;
   justify-content: center;

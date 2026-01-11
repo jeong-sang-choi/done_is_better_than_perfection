@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Noto Sans KR', sans-serif;
+}
+
+body {
+  background: #f5f5f5;
+}
+
+.page-bg {
+  min-height: 100vh;
+  padding: 64px;
+}
+.page-bg {
+  min-height: 100vh;
+  padding: 60px;
+  background: #f4f4f4; /* 카드 바깥도 동일하게 채움 */
+}
+
+.page-bg {
+  padding: 60px;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+/* 상단 탭 */
+.card-header {
+  padding: 20px 40px;
+  border-bottom: 1px solid #ddd;
+}
+
+.tabs {
+  display: flex;
+  justify-content: space-between;
+  color: #888;
+}
+
+.tabs .active {
+  color: #222;
+  border-bottom: 2px solid #222;
+  padding-bottom: 6px;
+}
+
+/* 본문 */
+.card-body {
+  position: relative;
+  padding: 60px 80px 100px;
+  position: relative;
+}
+
+/* 타이틀 */
+.title h1 {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.sub-en {
+  font-size: 20px;
+  color: #444;
+}
+
+.sub-ko {
+  font-size: 16px;
+  color: #777;
+  margin-top: 6px;
+}
+
+/* 타임라인 */
+.timeline {
+  display: flex;
+  align-items: center;
+  margin-top: 60px;
+  gap: 40px;
+  color: #666;
+}
+
+.past,
+.now {
+  font-size: 18px;
+}
+
+/* 화살표 */
+.now-line {
+  position: relative;
+  width: 4px;
+  height: 120px;
+  background: #ddd;
+  border-radius: 2px;
+}
+
+.now-line .dot {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 16px;
+  height: 16px;
+  background: #eee;
+  border: 2px solid #ccc;
+  border-radius: 50%;
+}
+
+/* 설명 */
+.flow-text {
+  margin-top: 40px;
+  font-size: 18px;
+  color: #555;
+}
+
+.flow-text span {
+  font-size: 15px;
+  color: #888;
+}
+
+/* 입력 박스 */
+.add-line {
+  margin-top: 40px;
+  color: #777;
+}
+
+.input-box {
+  background: #f1f1f1;
+  padding: 16px 20px;
+  border-radius: 12px;
+
+  width: 360px; /* 길이 */
+  font-size: 15px;
+  color: #444;
+
+  margin-top: 8px;
+}
+
+.i_will {
+  position: absolute;
+  right: 40px; /* 살짝 더 안쪽으로 */
+  bottom: 20px; /* 아래로 조금 내려서 안정감 */
+
+  width: 1000px; /*  여기서 크기 키움 */
+  max-width: 45%; /* 화면 작아질 때 대비 */
+
+  opacity: 0.9;
+  pointer-events: none;
+}

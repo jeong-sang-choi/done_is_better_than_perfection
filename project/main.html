@@ -11,9 +11,10 @@
     <!-- 상단 네비 -->
     <header class="top">
       <nav class="nav">
-        <span class="nav-item active">Today</span>
-        <span class="nav-item">Progress</span>
-        <span class="nav-item">I will</span>
+        <a href="main.html" class="nav-item active">Today</a>
+        <a href="progress.html" class="nav-item">Progress</a>
+        <a href="iwill.html" class="nav-item">I will</a>
+        <a href="login.html" class="nav-item login">Login</a>
       </nav>
     </header>
 
@@ -23,17 +24,17 @@
       <div class="snow"></div>
       <div class="snow snow2"></div>
 
-      <!-- 장면 -->
+      <!-- 장면 (캐릭터 + 말풍선만 담당) -->
       <div class="scene">
         <img src="images/character.png" class="character" />
 
         <div class="speech">
-          <p>Do it for yourself</p>
-          <p>Just 10 minutes.</p>
+          <p id="speech-line-1">Do it for yourself</p>
+          <p id="speech-line-2">Just 10 minutes.</p>
         </div>
       </div>
 
-      <!-- 스크롤 힌트 -->
+      <!-- 스크롤 힌트 (scene 밖 / container 기준) -->
       <div class="scroll-hint">
         <span>Scroll</span>
         <div class="arrow"></div>

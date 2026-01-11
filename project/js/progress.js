@@ -40,3 +40,31 @@ function animateBars() {
     }, 150 + index * 120);
   });
 }
+
+/* ===============================
+   STATS ANIMATION
+================================ */
+console.log('animateStats 실행됨');
+
+function animateStats() {
+  const stats = document.querySelectorAll('.stat .value');
+
+  stats.forEach((el) => {
+    const text = el.textContent;
+    const number = parseInt(text); // 숫자만 추출
+    if (isNaN(number)) return;
+
+    let current = 0;
+    el.textContent = '0';
+
+    const interval = setInterval(() => {
+      current++;
+      el.textContent = current;
+
+      if (current >= number) {
+        el.textContent = text; // 원래 텍스트 복원 (days, mins)
+        clearInterval(interval);
+      }
+    }, 40);
+  });
+}
